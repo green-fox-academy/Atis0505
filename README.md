@@ -1,2 +1,1 @@
-# Atis0505
-desc.
+[This is the syllabus link](https://github.com/greenfox-academy/rabbit-syllabus)
