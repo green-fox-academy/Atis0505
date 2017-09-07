@@ -4,25 +4,29 @@ body {
 #main {
     width: 350px;
     border: 15px solid #4485f2;
-    color: white;
-    font-size: 36px;
-    font-family: consolas;
-    margin: 5px;
 }
 
-.height {   
-    text-align: center;
-    height: 130px;
-    line-height: 130px; 
-    background: #e57575;
-    
-}
-.width {
+.height {
+    color: white;
     text-align: center;
     height: 130px;
     line-height: 130px;
-    background: #A8E5E5;
     
+    font-size: 36px;
+    font-family: consolas;
+}
+
+#north {
+    background: #e57575;
+}
+#east {
+    background: #F1EF65;
+}
+#south {
+    background: #A8E5E5;
+}
+#west {
+    background: #7692E2;
 }
 
 
