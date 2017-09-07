@@ -1,0 +1,18 @@
+div {
+    width: 305px;
+}
+
+.main div{
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    padding: 20px;
+}
+.main div:first-child{
+    border-top: 0px;
+}
+
+.main div:hover{
+    background: #EC6842;
+    /* color: white; */
+}
