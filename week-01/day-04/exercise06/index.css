@@ -1,0 +1,18 @@
+div {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    font-size: 36px;
+    color: #fff;
+    line-height: 140px;
+    text-align: center;
+    background: #0CEBDE;
+    display: inline-block;
+}
+div:first-child{
+    background: #B90CEB;
+}
+
+div:last-child{
+    background:#EBBE0C;
+}
