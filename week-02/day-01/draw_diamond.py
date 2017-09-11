@@ -14,14 +14,8 @@
 number1 = int(input("Number: "))
 star = "*"
 space = " "
-m = 0
-for j in range(1, (2*number1+1)):
-    if j % 2 == 1 and j != 0 and j <= number1:
-        print(space*(number1//2-m) + star*(j))
-        m += 1
-    elif j % 2 == 1 and j > number1:
-        n = number1
-        for i in range(1, number1):
-            m -= 2
-            print(space*i + star*m)
-            
+
+for i in range(1, int(2*number1)):
+    if number1 % 2 == 1 and number1 != 0 and i <= number1:
+        for m in reversed(range(int(number1//2)-1)):
+            print(space*m + star*i)
