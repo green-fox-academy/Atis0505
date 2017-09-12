@@ -2,6 +2,4 @@
 # Also, the URL is missing a crutial component, find out what it is and insert it too!
 
 url = "https//www.reddit.com/r/nevertellmethebots"
-def insert(string, index):
-    return string[:index]+":"+string[index:]
-print(insert(url,5))
+print(url[:5] + ":" +url[5:-4] + "odds")
