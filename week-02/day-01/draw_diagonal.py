@@ -10,16 +10,20 @@
 # %%%%%
 #
 # The square should have as many lines as the number was
-number1 = int(input("Number: "))
-space = " "
-prezent = "%"
-for i in range(1, number1):
-    if i == 1:
-        print(prezent*number1)
-    elif i == (number1-1):
-        print(prezent*number1)
-    else:
-        m = 0
-        for n in range(2, int(number1-1)):
-            print(prezent + space*m + prezent)
-            m += 1
+lines = int(input("Number of lines: "))
+puffer = ""
+
+for k in range(0, lines):
+   for i in range(0, lines):
+       if k == 0 or k == lines - 1:
+           puffer += "%"
+       else:
+           puffer = "%"
+           for l in range(1, lines - 1):
+               if l == k:
+                   puffer += "%"
+               else:
+                   puffer += " "
+           puffer += "%"
+   print (puffer + "\n")
+   puffer = ""

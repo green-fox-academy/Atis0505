@@ -11,11 +11,50 @@
 #    *
 #
 # The diamond should have as many lines as the number was
-number1 = int(input("Number: "))
-star = "*"
-space = " "
+lines = int(input("Number of lines: "))
+stars = ""
+spaces = ""
+j = 1
+for i in range(0, lines):
+   for k in range(0, j):
+       stars += "*"    
+   for k in range(0, lines - i):
+       spaces += " "
+   print (spaces + stars + "\n")
+   stars = ""
+   spaces = ""
+   j += 2
 
-for i in range(1, int(2*number1)):
-    if number1 % 2 == 1 and number1 != 0 and i <= number1:
-        for m in reversed(range(int(number1//2)-1)):
-            print(space*m + star*i)
+
+[5:54] 
+Diamond
+
+
+[5:54] 
+lines = int(input("Number of lines: "))
+stars = ""
+spaces = ""
+j = 1
+for i in range(0, lines):
+   for k in range(0, j):
+       stars += "*"    
+   for k in range(0, lines - i):
+       spaces += " "
+   print (spaces + stars + "\n")
+   stars = ""
+   spaces = ""
+   j += 2
+
+j = 2 * lines - 3
+spaces = ""
+stars = ""
+
+for i in range(0, lines):
+   for k in range(0, j):
+       stars += "*"    
+   for k in range(0, i+2):
+       spaces += " "
+   print (spaces + stars + "\n")
+   stars = ""
+   spaces = ""
+   j -= 2
