@@ -15,11 +15,13 @@
 # Waits for the user input
 # Print the result
 # Exit
+op, n, m = input("Give me datas separatly with \"-\": ").split("-")
 
-num01 = int(input("First number: "))
-num02 = int(input("Second number: "))
-op = str(input("Operation: "))
-
+# num01 = int(input("First number: "))
+# num02 = int(input("Second number: "))
+# op = str(input("Operation: "))
+num01 = int(n)
+num02 = int(m)
 
 def add():
     print(num01+num02)
@@ -40,4 +42,4 @@ operation = {
     "%" : mod,
 }
 
-operation[op]()
+operation[str(op)]()
