@@ -19,6 +19,4 @@ for m in notSoCrypticMessage:
     for i, j in hashmap.items():
         if m == i:
             out += j
-
-
 print(out)
