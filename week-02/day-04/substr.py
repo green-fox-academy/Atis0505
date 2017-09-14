@@ -24,3 +24,5 @@ def search_string(st01, st02):
     return -1
 
 print(search_string(string01,string02))
+
+print(string01.find(string02))
