@@ -14,4 +14,12 @@ for n in list_of_numbers:
 if equal_num == len(check_numbers):
     print("True")
 else:
-    print("False")            
+    print("False")           
+
+def is_all_element_in_the_list(need_to_contains, list_of_numbers):
+    for element in need_to_contains:
+        if not element in list_of_numbers:
+            return False
+    return True
+
+print(is_all_element_in_the_list(check_numbers,list_of_numbers))

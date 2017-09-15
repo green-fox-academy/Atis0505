@@ -28,3 +28,19 @@ def ownedCandies():
 
 countSum()
 ownedCandies()
+
+def sum_of_candies(studentslist):
+    candy_counter =0
+    for student in students:
+        candy_counter += student[candies]
+    return candy_counter
+
+def people_who_has_less_than_5_candies():
+    sum_of_ages = 0
+    for student in students:
+        if student['candies'] < 5:
+            sum_of_ages += students['age']
+    return sum_of_ages
+    
+sum_of_candies(students)
+people_who_has_less_than_5_candies(students)
