@@ -1,19 +1,17 @@
 import random
-# Find out the number
-#---------------------
-# Create function for read the parameter
-# Create function for randomed numbers
-# Check the numbers
+
+
 print("You have 5 lifes!")
 
 def read_user_parameters(): 
-    try:
-        user_number = int(input("Your number(1-100): "))
-        break
-    except ValueError:
-        print("This was not the number!")
-        
-    return user_number
+    user_number = None
+    while not type(user_number) == type(0):
+        try:
+            user_number = int(input("Your number(1-100): "))
+            return user_number  
+        except:
+            print("This is not number!")
+
 
 def create_random_numbers():
     random_number = 0
@@ -50,5 +48,5 @@ def user_message():
         else:
             print("GAME OVER DUDE!")
 
-            
+
 user_message()
