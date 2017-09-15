@@ -18,3 +18,17 @@ for i in range(0,4):
             oneline +="0"
         oneline+=" "
     print(oneline)
+
+matrix = []
+size = 3
+for n in range(size):
+    row = []
+    for m in range(size):
+        if n==m:
+            row.append("1")
+        else: 
+            row.append("0")
+    matrix.append(row)
+
+for matrix_row in matrix:
+    print(matrix_row)
