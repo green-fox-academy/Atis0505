@@ -7,3 +7,18 @@
 # to the file and each line should be "apple"
 # The function should not raise any error if it could not write the file.
 
+path_string = "apple.txt"
+word_string = "Apple"
+loop_number = 5
+
+def word_5_times(file_txt, word_st, loop_numb):
+    try:
+        my_file = open(file_txt, "w")
+        for i in range(loop_numb):
+            my_file.write(word_st + "\n")
+        my_file.close()
+        print("Done!")
+    except IOError:
+        print("Unable to write file, ",file_text)
+
+word_5_times(path_string, word_string, loop_number)
