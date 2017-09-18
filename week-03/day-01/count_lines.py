@@ -9,8 +9,7 @@ def read_file(file_txt):
     try:
         counter = 0
         file = open(file_txt,"r")
-        my_file = file.readlines()
-        for line in my_file:
+        for line in file:
             counter +=1
         file.close()
         print("Lines number in the file: ",counter)
