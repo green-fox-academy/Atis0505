@@ -10,7 +10,7 @@ canvas.pack()
 size_number = int(input("Size of the square: "))
 
 def draw_square_in_middle(size_value):
-    lime_box = canvas.create_rectangle(window_width/2-size_number, window_height/2-size_number, window_width/2+size_number, window_height/2+size_number, fill='lime green')
+    lime_box = canvas.create_rectangle(window_width/2-size_number/2, window_height/2-size_number/2, window_width/2+size_number/2, window_height/2+size_number/2, fill='lime green')
 
 
 draw_square_in_middle(size_number)
