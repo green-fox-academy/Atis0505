@@ -15,7 +15,7 @@ y = 0
 def sqaure_drawing(xparam, yparam):
     moving_size = 0;
     for i in range(3):
-        teal_line = canvas.create_rectangle(0+moving_size,0+moving_size,50+moving_size,50+moving_size, fill="orange")
+        teal_line = canvas.create_rectangle(xparam+moving_size,yparam+moving_size,50+moving_size,50+moving_size, fill="orange")
         moving_size += 50
 
 
