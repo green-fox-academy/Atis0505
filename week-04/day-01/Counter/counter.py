@@ -13,4 +13,3 @@ class Counter(object):
     
     def reset(self):
         self.__init__()
-
