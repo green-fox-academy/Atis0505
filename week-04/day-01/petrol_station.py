@@ -4,7 +4,7 @@ class Station(object):
 
     def refill(self):
         self.gasAmount -= Car.capacity
-
+        Car.gas_amount += Car.capacity
 
 class Car(object):
     gas_amount = 0
