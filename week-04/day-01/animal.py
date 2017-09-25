@@ -1,7 +1,7 @@
 class Animal(object):
-    def __init__(self):
-        self.hunger = 50
-        self.thirst = 50
+    def __init__(self, hunger, thirst):
+        self.hunger = hunger
+        self.thirst = thirst
 
 
     def eat(self):
@@ -19,12 +19,4 @@ class Animal(object):
         self.thirst += 1
         return print("hungry: " + str(self.hunger)+", thirst: "+str(self.thirst))
 
-    
-kutya = Animal()
-macska = Animal()
-
-kutya.eat()
-macska.drink()
-
-kutya.play()
 
