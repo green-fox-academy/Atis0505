@@ -3,8 +3,8 @@ class Tree(object):
         self.color = color
         self.amount = amount
 
-    def watering(self):
-        self.amount += 10
+    def watering(self, amount):
+        self.amount += amount
     
     def info(self):
         if self.amount > 85:

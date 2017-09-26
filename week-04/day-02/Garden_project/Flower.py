@@ -3,8 +3,8 @@ class Flower(object):
         self.color = color
         self.amount = amount
 
-    def watering(self):
-        self.amount += 10
+    def watering(self, amount = 0):
+        self.amount += amount
     
     def info(self):
         if self.amount > 65:
