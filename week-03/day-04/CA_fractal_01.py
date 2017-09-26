@@ -1,12 +1,15 @@
 from tkinter import *
+import time
 
 root = Tk()
 
 canvas = Canvas(root, width='600', height='600')
 canvas.pack()
 
-
+counter = 0
 def draw_lines(a,x, y):
+    time.sleep(0.1)
+    canvas.update()
     if a <= 5:
         return 0
     else:
