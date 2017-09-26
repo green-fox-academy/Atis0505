@@ -1,7 +1,7 @@
 from Person import Person
 
 class Sponsor(Person):
-    def __init__(self, company, hired_students):
+    def __init__(self, company = "Google", hired_students = 0):
         super().__init__()
         self.company = company
         self.hired_students = hired_students
