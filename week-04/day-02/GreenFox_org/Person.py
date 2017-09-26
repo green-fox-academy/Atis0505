@@ -5,9 +5,9 @@ class Person:
         self. gender = gender
 
     
-    def introduce():
+    def introduce(self):
         print('Hi, I\'m {}, a {} years old {}'.format(self.name, self.age, self.gender))
 
     
-    def get_goal():
+    def get_goal(self):
         print("My goal is: Live for the moment!")

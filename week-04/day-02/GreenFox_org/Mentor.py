@@ -1,7 +1,8 @@
 from Person import Person
 
 class Mentor(Person):
-    def __init__(self, level = "intermediate"):
+    def __init__(self, name = "Jane Doe", age = 30, gender = "famela", level = "intermediate"):
+        super().__init__(name, age, gender)
         self.level = level
 
     

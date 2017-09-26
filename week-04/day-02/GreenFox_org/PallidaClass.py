@@ -16,5 +16,5 @@ class PallidaClass:
         self.list_of_mentors.append(mentor)
 
 
-    def info():
-        pass
+    def info(self):
+        print("Pallida {} class has {} students and {} mentors.".format(self.class_name, str(len(self.list_of_students)), str(len(self.list_of_mentors))))
