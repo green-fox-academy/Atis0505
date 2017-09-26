@@ -1,10 +1,11 @@
 from Person import Person
 
 class Student(Person):
-    def __init__(self, previous_organization, skipped_days):
+    def __init__(self, previous_organization = "The School of Life", skipped_days = 0):
         super().__init__()
         self.previous_organization = previous_organization
         self.skipped_days = skipped_days
+
 
     def get_goal(self):
          print("Be a junior software developer.")
