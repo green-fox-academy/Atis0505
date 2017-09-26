@@ -1,7 +1,7 @@
 from Person import Person
 
 class Mentor(Person):
-    def __init__(self, level):
+    def __init__(self, level = "intermediate"):
         self.level = level
 
     
