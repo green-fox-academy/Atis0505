@@ -3,11 +3,11 @@ class Tree(object):
         self.color = color
         self.amount = amount
 
-    def watering(self, amount):
+    def watering(self, amount = 0):
         self.amount += amount
     
     def info(self):
         if self.amount > 85:
-            print("The {} color tree doesn't need water.".format(self.color))
+            print("The {} tree doesn't need water.".format(self.color))
         else:
-            print("The {} color tree needs water.".format(self.color))
+            print("The {} tree needs water.".format(self.color))

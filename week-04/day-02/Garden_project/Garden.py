@@ -40,7 +40,9 @@ tree03 = Tree("black", 78)
 garden.add_tree(tree03)
 
 garden.watering(10)
+print()
 garden.watering(20)
+print()
 garden.watering(25)
 
 

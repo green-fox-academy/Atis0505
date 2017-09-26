@@ -8,6 +8,6 @@ class Flower(object):
     
     def info(self):
         if self.amount > 65:
-            print("The {} color flower doesn't need water.".format(self.color))
+            print("The {} flower doesn't need water.".format(self.color))
         else:
-            print("The {} color flower needs water.".format(self.color))
+            print("The {} flower needs water.".format(self.color))
