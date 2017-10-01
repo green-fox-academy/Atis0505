@@ -12,18 +12,11 @@ numbers = [1, 11, 34, 52, 61]
 numb = 1
 
 def number_finder(a, numb_list):
-    string_list=[]
     index_list = []
-    for n in range(len(numb_list)):
-        string_list.append(str(numb_list[n]))
-    for i in range(len(numb_list)):
-        flag = True
-        for j in range(len(string_list[i])):
-            if string_list[i][j] == str(a) and flag:
-                index_list.append(i)
-                flag = False
-
-    print(string_list)
+    for index, number in enumerate(numb_list):
+        if str(a) in str(number):
+            index_list.append(index)
     print(index_list)
+                
 
 number_finder(numb, numbers)
