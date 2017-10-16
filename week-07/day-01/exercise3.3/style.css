@@ -1,0 +1,27 @@
+body {
+    background: #eee;
+}
+
+/* .wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+} */
+
+.container {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    height: 280px;
+    background-color: yellow;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.item {
+    height: 110px;
+    width: 110px;
+    background-color: purple;
+    margin-right: 5px;
+}
+
