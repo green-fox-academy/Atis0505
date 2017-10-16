@@ -11,14 +11,13 @@ body {
 .container {
     display: flex;
     align-items: center;
-    max-width: 380px;
     flex-flow: column;
     height: 100%;
 }
 
 .item {
     height: 125px;
-    width: 380px;
+    width: 100%;
 }
 
 .green {
