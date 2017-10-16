@@ -1,0 +1,40 @@
+body {
+    background: #eee;
+}
+
+/* .wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+} */
+
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 380px;
+    flex-flow: column;
+    height: 100%;
+}
+
+.item {
+    height: 125px;
+    width: 380px;
+}
+
+.green {
+    background-color: green;
+    order: 0;
+    flex-basis: 125px;
+}
+
+.yellow {
+    background-color: yellow;
+    order: 2;
+    flex-basis: 250px;
+}
+
+.purple {
+    background-color: purple;
+    order: 1;
+    flex-basis: 125px;
+}
