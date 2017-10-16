@@ -2,16 +2,11 @@ body {
     background: #eee;
 }
 
-/* .wrapper {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-} */
 
 .container {
     display: flex;
     align-items: center;
-    max-width: 760px;
+    max-width: 570px;
 }
 
 .item {
@@ -21,15 +16,12 @@ body {
 
 .green {
     background-color: green;
-    flex-grow: 0;
 }
 
 .yellow {
     background-color: yellow;
-    flex-grow: 1;
 }
 
 .purple {
     background-color: purple;
-    flex-grow: 0;
 }
