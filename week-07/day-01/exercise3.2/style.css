@@ -1,0 +1,32 @@
+body {
+    background: #eee;
+}
+
+/* .wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+} */
+
+.container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    float: center;
+    flex-flow: row;
+    height: 280px;
+    background-color: yellow;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.item {
+    height: 110px;
+    width: 110px;
+    background-color: purple;
+    padding: 0px;
+}
+
