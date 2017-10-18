@@ -36,3 +36,18 @@ body {
     flex-grow: 0;
     order: 0;
 }
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 700px){
+ .container {
+    flex-direction: column;
+}
+}
+
+@media screen and (max-width: 700px){
+.item {
+    width: 100%;
+}
+
+}
