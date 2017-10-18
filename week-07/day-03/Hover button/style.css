@@ -33,7 +33,7 @@ p {
     margin: auto;
     display: table-cell;
     vertical-align: middle;
-    
+    transition: all 0.5s;
 
 }
 
@@ -45,7 +45,7 @@ p {
     border: 3px solid #FF6347;
     align-items: center;
     justify-content: center;
-    
+    transition: all 0.5s;
 }
 
 .button:hover {
@@ -55,7 +55,7 @@ p {
 }
 
 .button:hover p {
-    transition: 0.5s;
+    transition: all 0.5s;
     color: #FF6347;
     -webkit-transform: rotate(-45deg);
 
