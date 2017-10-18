@@ -1,27 +1,61 @@
+
 .line {
+    background-color:#2F3060;
+    width: 50%;
+    height: 500px;
+    margin: 50px auto;
     display: flex;
     flex-direction: row;
-    align-items: center; 
+    align-items: center;
+    justify-content: center;
 }
 
 
 .button {
     width: 140px;
     height: 55px;
-    border-radius: 4px;
-    font-size: 15px;
+    border-radius: 7px;
+    font-size: 20px;
     text-align: center;
     color: #BFD1F9;
+    margin: 40px;
+    box-sizing: border-box;
+    padding-top:15px;
+    opacity: 0.9;
+}
+
+a {
+    text-decoration: none;
 }
 
 .blue {
     background: #4261A1;
+    box-shadow: 0px 5px 0px #27386D;
 }
 
 .green {
     background: #19A754;
+    box-shadow: 0px 5px 0px #176A40;
 }
 
 .red {
     background: #D34332;
+    box-shadow: 0px 5px 0px #862C2F;
+}
+
+/* a:hover {
+    opacity: 70%;
+}
+
+a:active {
+    opacity: 90%;
+} */
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.button:active {
+  opacity: 1;
+  transform: translateY(4px);
 }
