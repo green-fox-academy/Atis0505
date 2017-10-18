@@ -1,0 +1,27 @@
+.line {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+
+.button {
+    width: 140px;
+    height: 55px;
+    border-radius: 4px;
+    font-size: 15px;
+    text-align: center;
+    color: #BFD1F9;
+}
+
+.blue {
+    background: #4261A1;
+}
+
+.green {
+    background: #19A754;
+}
+
+.red {
+    background: #D34332;
+}
