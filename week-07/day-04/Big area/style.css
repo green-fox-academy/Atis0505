@@ -1,0 +1,30 @@
+.content {
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 135px);
+    grid-template-areas: "nav section section"
+                         "nav section section"
+                         "nav nav nav";
+    grid-gap: 10px;
+    background-color:#323232;
+}
+
+.purple {
+    grid-area: nav;
+    background-color: #B02EFD;
+}
+
+.green {
+    display: flex;
+    grid-area: section;
+    background-color: green;
+    align-items: center;
+    justify-content: center;
+}
+
+.yellow {
+    width: 410px;
+    height: 180px;
+    background-color: yellow;
+}
