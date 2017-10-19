@@ -3,28 +3,54 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 135px);
-    grid-template-areas: "nav section section"
-                         "nav section section"
-                         "nav nav nav";
+    grid-template-areas: "one two two"
+                         "three two two"
+                         "four five six";
     grid-gap: 10px;
     background-color:#323232;
 }
 
-.purple {
-    grid-area: nav;
+.one {
+    grid-area: one;
     background-color: #B02EFD;
 }
 
-.green {
+.three {
+    grid-area: three;
+    background-color: #B02EFD;
+}
+
+.four {
+    grid-area: four;
+    background-color: #B02EFD;
+}
+
+.five {
+    grid-area: five;
+    background-color: #B02EFD;
+}
+
+.six {
+    grid-area: six;
+    background-color: #B02EFD;
+}
+
+.two {
+    grid-area: two;
+    background-color: #B02EFD;
+}
+
+
+.two {
     display: flex;
-    grid-area: section;
+    grid-area: two;
     background-color: green;
     align-items: center;
     justify-content: center;
 }
 
 .yellow {
-    width: 410px;
+    width: 65%;
     height: 180px;
     background-color: yellow;
 }
