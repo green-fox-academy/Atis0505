@@ -1,0 +1,100 @@
+.main-content {
+    width: 100%;
+    height: 610px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 7fr 1fr;
+    grid-template-areas: "picture feature"
+                         "picture buttons";
+}
+
+.picture {
+    grid-area: picture;
+    background-image: url("../assets/feature_image.png")
+}
+
+.feature {
+    display: flex;
+    grid-area: feature;
+    background-color: #222222;
+    color: white;
+    padding: 60px;
+    flex-direction: column;
+}
+
+.feature p.label{
+    height: 80px;
+    width: 100%;
+    color: #616161;
+    font-size: 30px;
+    margin: auto;
+}
+
+.feature p.title{
+    
+    height: 250px;
+    width: 100%;
+    font-size: 70px;
+    margin: auto;
+    
+}
+
+.feature p.text{
+    border-top: 5px solid white;
+    font-size: 15px;
+    height: 70px;
+    width: 100%;
+}
+
+.feature p.read{
+    font-size: 40px;
+}
+
+.buttons {
+    display: flex;
+    grid-area: buttons;
+    background-color: lightgray;   
+}
+
+.buttons p{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: #616161;
+    text-align: center;
+    border: 1px solid grey;
+    font-size: 40px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0px 0px 10px #000000;
+    transition: all 0.5s;
+}
+
+.left:before{
+    display: inline-block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    /* background: url("../assets/if_left-arrow-backward-sign_2075797.svg") no-repeat; */
+    
+}
+
+.right:after{
+    display: inline-block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    /* background: url("../assets/if_right-arrow-foward-sign_2075798.svg") no-repeat; */
+    
+}
+
+
+.buttons p:hover{
+    opacity: 0.8;
+}
+
+.buttons p:active {
+    opacity: 1;
+    transform: translateY(4px);
+}

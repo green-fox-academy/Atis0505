@@ -1,0 +1,27 @@
+.yellow {
+    background-color: #FFD62A;
+}
+
+.green {
+    background-color: #4ED317;
+}
+
+.item {
+    display: flex;
+    font-size: 40px;
+    height: 170px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+#content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 60% 1fr;
+    grid-gap: 10px;
+    background-color: #B02EFD;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}

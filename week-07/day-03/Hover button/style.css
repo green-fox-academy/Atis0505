@@ -55,7 +55,7 @@ p {
 }
 
 .button:hover p {
-    transition: all 0.5s;
+    transition: 0.5s;
     color: #FF6347;
     -webkit-transform: rotate(-45deg);
 

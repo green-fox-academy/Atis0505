@@ -1,0 +1,50 @@
+body {
+    background: #eee;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.mainrow {
+    height: 75px;
+    width: 100%;
+}
+
+.head {
+    background-color: cyan;
+}
+
+.foot {
+    background-color: blue;
+}
+
+.middle {
+    height: 550px;
+    display: flex;
+    flex-flow: row;
+}
+
+.maincolumn {
+    width: 960px;
+    height: 700px;
+    
+}
+
+.first {
+    background-color: #fea500
+    
+}
+
+.second {
+    background-color: #fe0000
+}
+
+.third {
+    background-color: #81007f
+}

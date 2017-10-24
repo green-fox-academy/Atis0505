@@ -16,32 +16,19 @@ body {
 }
 
 .item {
-    height: 125px;
     width: 100%;
+    position: relative;
 }
 
-.green {
-    background-color: green;
-    order: 0;
-    flex-basis: 125px;
-}
-
-.yellow {
+.item:nth-child(1) {
     background-color: yellow;
-    order: 2;
-    flex-basis: 250px;
+    width: 755px;
+    height: 280px;
 }
 
-.purple {
+.item:nth-child(2) {
     background-color: purple;
-    order: 1;
-    flex-basis: 125px;
-}
-
-.footer {
-    background-color: blue
-}
-
-.header {
-    background: cyan
+    width: 110px;
+    height: 110px;
+    top: -195px;
 }
