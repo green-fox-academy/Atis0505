@@ -15,10 +15,12 @@ var lineCount = 6;
 var line ="";
 for(i=0; i<=lineCount; i++){
     for(j=0; j<=lineCount; j++){
-        if(j===0 || i===0){
+        if(j===0 || i===0 || j===lineCount || i===lineCount){
             line += "%";
         }else{
             line += " ";
         }
     }
+    console.log(line);
+    line="";
 }
