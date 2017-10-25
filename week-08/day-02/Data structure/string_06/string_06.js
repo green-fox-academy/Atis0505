@@ -4,6 +4,7 @@
 // Assemble the fragments into the out variable
 
 var out = "";
+var out2 = "";
 var notSoCrypticMessage = [1, 12, 1, 2, 11, 1, 7, 11, 1, 49, 1, 3, 11, 1, 50, 11];
 
 var hashmap = {
@@ -25,5 +26,9 @@ for(var i = 0; i<= notSoCrypticMessage.length-1;i++){
     }
 }
 
+notSoCrypticMessage.forEach(function(number){
+    out2 += hashmap[number]
+})
 
 console.log(out)
+console.log(out2)
