@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Slide show</title>
+</head>
+<body>
+    <container>
+        <div class="left arrow"><i class="l"></i></div>
+        <content class="main_picture"><img src="talisman.jpg" alt="Renault Talisman"></content>
+        <div class="right arrow"><i class="r"></i></div>
+        <footer>
+
+        </footer>
+    </container>
+    <script>
+        const cars = [
+        {
+            title:'Talisman',
+            Description:'Talisman',
+            url:'talisman.jpg'
+        },
+        {
+            title:'Captur',
+            Description:'Captur',
+            url:'captur.jpg'
+        },
+        {
+            title:'Clio',
+            Description:'Clio',
+            url:'clio.jpg'
+        },
+        {
+            title:'Koleos',
+            Description:'Koleos',
+            url:'koleos.jpg'
+        },
+        {
+            title:'Megane',
+            Description:'Megane',
+            url:'megane.jpg'
+        },
+        {
+            title:'Scenic',
+            Description:'Scenic',
+            url:'scenic.jpg'
+        },
+        {
+            title:'Thalia',
+            Description:'Thalia',
+            url:'thalia.jpg'
+        }
+        ];
+        var footer_container = document.querySelector('footer');
+        cars.forEach(function(car) {
+            var newImage = document.createElement('img');
+            newImage.classList.add('car_image');
+            newImage.textContent = car['Description'];
+            newImage.setAttribute('src', car['url']);
+            footer_container.appendChild(newImage);
+        });
+
+        var main_picture = document.querySelector('.main_picture img');
+        console.log(main_picture);
+
+        var thumbNails = document.querySelectorAll('.car_image');
+        thumbNails.forEach(function(item, i){
+            item.addEventListener('click', function(){
+                main_picture.setAttribute('src',cars[i]['url']);
+            });
+        });
+
+        var arrowLeft = document.querySelector('.l');
+        var arrowRight = document.querySelector('.r');
+
+        function clickOnLeftArrows(){
+            cars.forEach(function(car, i){
+                        if(car['url'] === main_picture.getAttribute('src')){
+                            main_picture.setAttribute('src',cars[i-1]['url']);
+                        }
+                    })
+        };
+
+        function clickOnRightArrows(){
+            cars.forEach(function(car, i){
+                if(car['url'] === main_picture.getAttribute('src')){
+                    main_picture.setAttribute('src',cars[i+1]['url']);
+                }
+            })
+        };
+
+
+        arrowLeft.addEventListener('click', clickOnLeftArrows);
+        arrowRight.addEventListener('click', clickOnRightArrows);
+    </script>
+</body>
+</html>
