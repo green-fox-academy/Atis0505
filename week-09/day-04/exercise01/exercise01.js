@@ -9,9 +9,6 @@ var myData = JSON.parse(myRequest.response);
 
 console.log(myData.data);
 
-function Gif(){
-
-}
 
 var footer = document.querySelector('footer');
 var mainContent = document.querySelector('content');

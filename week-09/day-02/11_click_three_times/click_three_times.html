@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button>Button</button>
+    <p></p>
+    <script>
+        var isFiveSec = false;
+        setTimeout(function(){
+            isFiveSec = true;
+        },5000);
+        var button = document.querySelector('button');
+        var paragaraph = document.querySelector('p');
+        button.addEventListener('click', function(){
+            if(isFinite === false){
+                counter++;
+            }
+            if(isFiveSec===true && counter > 0){
+                changeText(counter);
+            }else{
+                console.log("nothing");
+            }
+        });
+
+        var counter = 0;
+        
+        // function clickOn(){
+        //     counter++;
+        //     changeText(counter);
+        // //     setTimeout(function(){ paragraph.textContent = "3 click and 5 second ellapsed";},2000);
+        //  }
+
+        function changeText(counter){
+            if(counter >= 3){
+                paragaraph.textContent = "3 click and 5 second ellapsed";
+            }
+        }
+
+    </script>
+</body>
+</html>

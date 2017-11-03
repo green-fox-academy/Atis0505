@@ -1,0 +1,53 @@
+body{
+    background: lightcyan;
+}
+
+container {
+    box-sizing: border-box;
+    background-color: lightcoral;
+    width: 800px;
+    height: 600px;
+    padding: 50 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "first_sidebar content"
+                         "second_sidebar content";
+}
+
+.first {
+    grid-area: first_sidebar;
+    background-color: lightpink;
+}
+
+.second {
+    grid-area: second_sidebar;
+    background-color: lightgreen;
+}
+
+sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+content {
+    display: flex;
+    flex-direction: column;
+    grid-area: content;
+    background-color: lightblue;
+}
+
+button {
+    margin: 20px;
+    font-weight: bold;
+    width: 150px;
+    height: 30px;
+}
+
+.level {
+    background-color:  white;
+    width: 100px;
+    height: 30px;
+}

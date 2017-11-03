@@ -14,10 +14,10 @@ var fruits = [
 // occurs in the word stored under the same index at the fruits array!
 // Please use the map method.
 var newArray = fruits.map(function(fruit){
+
     var letter_number = 0;
-    var chars_list = fruit.split("");
-    for(var i = 0; i < chars_list.length; i++){
-        if(chars_list[i] === 'e'){
+    for(var i = 0; i < fruit.length; i++){
+        if(fruit[i] === 'e'){
             letter_number ++;
         }
     }
