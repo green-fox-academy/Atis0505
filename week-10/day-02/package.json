@@ -1,0 +1,16 @@
+{
+  "name": "javascript_testing",
+  "version": "1.0.0",
+  "description": "testing javascript files",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "tape": "^4.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Attila",
+  "license": "ISC"
+}
