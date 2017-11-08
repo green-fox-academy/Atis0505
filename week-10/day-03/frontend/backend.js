@@ -1,5 +1,7 @@
 let express = require('express');
 let app = express();
+express.json.type = "application/json";
+
 
 app.use("/assets", express.static('./assets'));
 
@@ -9,8 +11,11 @@ app.get('/',function(req, rep){
 });
 
 app.get('/doubling',function(req, res){
-    let response_number = {"received": req.query.input, "result":req.query.input*2};
-    res.send(JSON.stringify(response_number));
+    let response_answer = {"error": "Please provide an input!"}  ;
+    if(req.query.input !== undefined){
+        response_answer = {"received": req.query.input*1, "result":req.query.input*2};       
+    }
+    res.json(response_answer);
 });
 
 
