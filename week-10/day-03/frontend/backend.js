@@ -30,15 +30,11 @@ app.get('/greeter', function(req, rep){
 });
 
 app.get('/appenda/:animal', function(req, rep){
-    if(req.params.animal !== null){
-        var appendA_answer = {"appended" : req.params.animal + "a"};
-    }else{
-        app
-    }
-    
+    let appendA_answer = {"appended" : req.params.animal + "a"};  
     rep.json(appendA_answer);
 });
 
+app.post('/dountill/:what', function(req, res))
 
 
 app.listen(8080);
