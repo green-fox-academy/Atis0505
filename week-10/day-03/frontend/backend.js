@@ -1,6 +1,9 @@
 let express = require('express');
 let app = express();
 express.json.type = "application/json";
+let bodyParser = require('body-parser');
+const jsonParser = bodyParser.json();
+
 
 
 app.use("/assets", express.static('./assets'));
@@ -34,7 +37,26 @@ app.get('/appenda/:animal', function(req, rep){
     rep.json(appendA_answer);
 });
 
-app.post('/dountill/:what', function(req, res))
+app.post('/dountil/:what', jsonParser, function(req, res){
+    let result = 0;
+    console.log(req.body);
+
+    if(req.params.what === 'sum'){
+        var sum = 0;
+        for(var i=0; i<req.body.until+1; i++ ){
+            sum += i;
+        }
+        result = sum;
+
+    }else if(req.params.what === 'factor'){
+        var fact = 1;
+        for(var i = 1; i<req.body.until+1; i++ ){
+            fact *= i;
+        }
+        result = fact;
+    }
+    res.json({"result": result});
+});
 
 
 app.listen(8080);
