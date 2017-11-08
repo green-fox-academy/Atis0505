@@ -1,12 +1,12 @@
 let express = require('express');
 let app = express();
 express.json.type = "application/json";
-let bodyParser = require('body-parser');
-const jsonParser = bodyParser.json();
+
 
 
 
 app.use("/assets", express.static('./assets'));
+app.use(express.json());
 
 
 app.get('/',function(req, rep){
@@ -22,9 +22,9 @@ app.get('/doubling',function(req, res){
 });
 
 app.get('/greeter', function(req, rep){
-    if(req.query.name === null){
+    if(req.query.name === undefined){
         answer = { "error": "Please provide a name!"};
-    }else if(req.query.title === null){
+    }else if(req.query.title === undefined){
         answer = { "error": "Please provide a title!"};
     }else{
         answer = { "welcome_message": "Oh, hi there " +req.query.name+", my dear " +req.query.title + "!"};
@@ -37,7 +37,7 @@ app.get('/appenda/:animal', function(req, rep){
     rep.json(appendA_answer);
 });
 
-app.post('/dountil/:what', jsonParser, function(req, res){
+app.post('/dountil/:what', function(req, res){
     let result = 0;
     console.log(req.body);
 
@@ -46,16 +46,36 @@ app.post('/dountil/:what', jsonParser, function(req, res){
         for(var i=0; i<req.body.until+1; i++ ){
             sum += i;
         }
-        result = sum;
+        result = {"result": sum};
 
     }else if(req.params.what === 'factor'){
         var fact = 1;
         for(var i = 1; i<req.body.until+1; i++ ){
             fact *= i;
         }
-        result = fact;
+        result = {"result": fact};
+    }else if(!req.body.until){
+        result = {
+            "error": "Please provide a number!"
+          }
     }
-    res.json({"result": result});
+    res.json(result);
+});
+
+app.post('/arrays', function(req, res){
+    let result = 0;
+    if(req.body.what === 'sum'){
+        result = req.body.numbers.reduce(function(akkum, number){
+            return akkum + number;
+        });
+    }else if(req.body.what === 'multiply'){
+        result = req.body.numbers.reduce(function(number){
+            return akkum * number;
+        });
+    }else if(req.body.what === 'doubling'){
+        result = req.body.numbers.map((number) => number*2);
+    }
+    res.json(result);
 });
 
 
