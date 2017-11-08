@@ -18,5 +18,27 @@ app.get('/doubling',function(req, res){
     res.json(response_answer);
 });
 
+app.get('/greeter', function(req, rep){
+    if(req.query.name === null){
+        answer = { "error": "Please provide a name!"};
+    }else if(req.query.title === null){
+        answer = { "error": "Please provide a title!"};
+    }else{
+        answer = { "welcome_message": "Oh, hi there " +req.query.name+", my dear " +req.query.title + "!"};
+    }
+    rep.json(answer);
+});
+
+app.get('/appenda/:animal', function(req, rep){
+    if(req.params.animal !== null){
+        var appendA_answer = {"appended" : req.params.animal + "a"};
+    }else{
+        app
+    }
+    
+    rep.json(appendA_answer);
+});
+
+
 
 app.listen(8080);
