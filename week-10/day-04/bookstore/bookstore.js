@@ -36,14 +36,14 @@ app.get('/list', function(request, response) {
             console.log(err.toString());
         }
         console.log("Data received from Db:\n");
-        console.log(rows);
-        var htmlString = '<ul>';
-        rows.forEach(function(row) {
+        // console.log(rows);
+        // var htmlString = '<ul>';
+        // rows.forEach(function(row) {
             
-            htmlString = htmlString + '<li>' + row.book_name + '</li>';
-        });
-        htmlString = htmlString + '</ul>';
-        response.send(htmlString);
+        //     htmlString = htmlString + '<li>' + row.book_name + '</li>';
+        // });
+        // htmlString = htmlString + '</ul>';
+        response.send(rows);
     });
 
 });
