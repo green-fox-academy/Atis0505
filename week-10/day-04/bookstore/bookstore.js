@@ -6,8 +6,8 @@ let app = express();
 let sql_query_book_title = "SELECT book_name FROM book_mast;";
 express.json.type = "application/json";
 
-app.use(express.json);
-// app.use('/assets',express.static('./assets'));
+app.use(express.json());
+app.use('/assets',express.static('./assets'));
 
 var connection = mysql.createConnection({
     host: 'localhost',
@@ -17,7 +17,6 @@ var connection = mysql.createConnection({
 });
 
 app.get('/', function(request, response){
-    console.log("knknkn");
     response.sendFile(__dirname + '/index.html');
 });
 
@@ -32,19 +31,21 @@ connection.connect(function(err){
 
 
 app.get('/list', function(request, response) {
-    console.log("ksd ksdakja");
     connection.query(sql_query_book_title, function(err, rows){
         if(err){
             console.log(err.toString());
         }
         console.log("Data received from Db:\n");
-        let htmlString = '<ul>';
+        console.log(rows);
+        var htmlString = '<ul>';
         rows.forEach(function(row) {
-            htmlString = htmlString + '<li>' + row.book_name + '<li>';
+            
+            htmlString = htmlString + '<li>' + row.book_name + '</li>';
         });
-        htmlString = htmlString + '<ul>';
-    })
-    response.send(htmlString);
+        htmlString = htmlString + '</ul>';
+        response.send(htmlString);
+    });
+
 });
 
 

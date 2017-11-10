@@ -12,6 +12,7 @@ function talkToApi(method, resource){
         bodyElement.appendChild(div);
     }
     connectionObject.send();
+
 }
 
 talkToApi("GET", "/list");
