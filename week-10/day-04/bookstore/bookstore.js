@@ -4,6 +4,11 @@ const mysql = require('mysql');
 let express = require('express');
 let app = express();
 let sql_query_book_title = "SELECT book_name FROM book_mast;";
+let sql_query_to_table =`SELECT book_name, aut_name, cate_descrip, pub_name, book_price
+                        FROM book_mast
+                        INNER JOIN author ON book_mast.aut_id = author.aut_id 
+                        INNER JOIN category ON book_mast.cate_id = category.cate_id 
+                        INNER JOIN publisher ON book_mast.pub_id = publisher.pub_id`;
 express.json.type = "application/json";
 
 app.use(express.json());
@@ -36,13 +41,18 @@ app.get('/list', function(request, response) {
             console.log(err.toString());
         }
         console.log("Data received from Db:\n");
-        // console.log(rows);
-        // var htmlString = '<ul>';
-        // rows.forEach(function(row) {
-            
-        //     htmlString = htmlString + '<li>' + row.book_name + '</li>';
-        // });
-        // htmlString = htmlString + '</ul>';
+        response.send(rows);
+    });
+
+});
+
+
+app.get('/table', function(request, response) {
+    connection.query(sql_query_to_table, function(err, rows){
+        if(err){
+            console.log(err.toString());
+        }
+        console.log("Data received from Db:\n");
         response.send(rows);
     });
 
