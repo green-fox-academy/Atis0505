@@ -11,7 +11,7 @@
     <container>
         <sidebar class="first">
             <button class ="up">UP</button>
-            <button clas ="down">DOWN</button>
+            <button class ="down">DOWN</button>
         </sidebar>
         <sidebar class="second">
             <button class="add">Add people</button>
@@ -19,46 +19,6 @@
         </sidebar>
         <content></content>
     </container>
-    <script>
-        class ElevatorModel{
-            constructor(maxFloor, maxPeople){
-                this.maxFloor = maxFloor;
-                this.maxPeople = maxPeople;
-                this.people_in_elevator = 0;
-            }
-
-
-
-        }
-
-        // class ElevatorController{
-        //     contructor(){
-                
-        //         this.up_button = document.querySelector('.up');
-        //         this.down_button = document.querySelector('.down');
-        //         this.add_button = document.querySelector('.add');
-        //         this.remove_button = document.querySelector('.remove');
-        //     }
-
-        // }
-        class ElevatorView{    
-
-            drawElevator(){
-                console.log(myModel.maxFloor);
-                var content = document.querySelector('content');
-                for(var i = 0; i <= myModel.maxFloor; i++){
-                    var newDiv = document.createElement('div');
-                    newDiv.classList.add('level');
-                    content.appendChild(newDiv);
-                }
-
-                
-            }
-        }
-        var myModel = new ElevatorModel(10,10);
-        console.log(myModel.maxFloor);
-        var myView = new ElevatorView;
-        myView.drawElevator();
-    </script>
+    <script src="frontend_engine.js"></script>
 </body>
 </html>

@@ -1,13 +1,22 @@
 body{
+    display: inline-block;
     background: lightcyan;
+    justify-content: center;
 }
+
+html {
+    text-align: center;
+}
+  
 
 container {
     box-sizing: border-box;
-    background-color: lightcoral;
+    background-color: tomato;
+    text-align: center;
     width: 800px;
     height: 600px;
     padding: 50 auto;
+    margin: 50 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -17,12 +26,10 @@ container {
 
 .first {
     grid-area: first_sidebar;
-    background-color: lightpink;
 }
 
 .second {
     grid-area: second_sidebar;
-    background-color: lightgreen;
 }
 
 sidebar {
@@ -33,10 +40,11 @@ sidebar {
 }
 
 content {
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     grid-area: content;
-    background-color: lightblue;
+    align-self: center;
+    justify-content: center;
 }
 
 button {
@@ -50,4 +58,14 @@ button {
     background-color:  white;
     width: 100px;
     height: 30px;
+    border: 1px solid black;
+    text-align: center;
+    justify-content: center;
+}
+
+.green {
+    background: lightgreen;
+    font: bold;
+    font-size: 25px;
+    text-align: center;
 }
