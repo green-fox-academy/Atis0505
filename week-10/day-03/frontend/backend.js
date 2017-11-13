@@ -38,22 +38,11 @@ app.get('/appenda/:animal', function(req, rep){
 });
 
 app.post('/dountil/:what', function(req, res){
-    let result = 0;
-    console.log(req.body);
-
-    if(req.params.what === 'sum'){
-        var sum = 0;
-        for(var i=0; i<req.body.until+1; i++ ){
-            sum += i;
-        }
-        result = {"result": sum};
-
+    let number = req.body.until;
+    if(req.params.what === 'sum'){ 
+        result = sum(number);
     }else if(req.params.what === 'factor'){
-        var fact = 1;
-        for(var i = 1; i<req.body.until+1; i++ ){
-            fact *= i;
-        }
-        result = {"result": fact};
+        result = factor(number);
     }else if(!req.body.until){
         result = {
             "error": "Please provide a number!"
@@ -78,5 +67,22 @@ app.post('/arrays', function(req, res){
     res.json(result);
 });
 
+function sum(number){
+    var sum = 0;
+    for(var i=0; i<number+1; i++ ){
+        sum += i;
+    }
+    let result = {"result": sum};
+    return result;
+}
+
+function factor(number){
+    var fact = 1;
+    for(var i = 1; i<number+1; i++ ){
+        fact *= i;
+    }
+    result = {"result": fact};
+    return result;
+}
 
 app.listen(8080);

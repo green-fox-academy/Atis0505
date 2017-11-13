@@ -1,7 +1,6 @@
-'use strict'
 console.log(typeof function(){});
-
-console.log(typeof akarmi());
+akarmi();
+console.log(typeof akarmi);
 
 
 var akarmi = function(){

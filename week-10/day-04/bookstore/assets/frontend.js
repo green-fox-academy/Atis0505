@@ -27,14 +27,16 @@ function createNameOfList(response){
     // div.innerHTML = responseText;
     div.innerHTML = tableData;
     bodyElement.appendChild(div);
-    talkToApi("GET", "/table", createTableOfDatas);
+    
 }
+
+talkToApi("GET", "/table", createTableOfDatas);
 
 function createTableOfDatas(responseData){
     let tableRows = JSON.parse(responseData);
     console.log(tableRows);
     let div = document.createElement('div');
-    let tableInnerContent = `<table>
+    let tableInnerContent = `<table style="border-width:1px;border-color:black;border-style:solid;">
                     <thead>
                         <th>Book name</th>
                         <th>Author name</th>

@@ -23,6 +23,7 @@ var connection = mysql.createConnection({
 
 app.get('/', function(request, response){
     response.sendFile(__dirname + '/index.html');
+    console.log(__dirname);
 });
 
 connection.connect(function(err){
@@ -58,20 +59,5 @@ app.get('/table', function(request, response) {
 
 });
 
-
-// app.get('/all', function(request, response){
-//     connection.query(sql_query_book_title, function(err, rows){
-//         if(err){
-//             console.log(err.toString());
-//         }
-//         console.log("Data received from Db:\n");
-//         let htmlString = '<table><ul>';
-//         rows.forEach(function(row) {
-//             htmlString = htmlString + '<li>' + row.book_name + '<li>';
-//         });
-//         htmlString = htmlString + '<ul>';
-//     })
-//     response.send(htmlString);
-// });
 
 app.listen(4000);

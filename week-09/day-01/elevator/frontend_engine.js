@@ -48,7 +48,7 @@ class ElevatorView{
         var content = document.querySelector('content');
         for(var i = 0; i <= myModel.maxFloor; i++){
             var newDiv = document.createElement('div');
-            newDiv.classList.add('level'    );
+            newDiv.classList.add('level');
             content.appendChild(newDiv);    
         }
         content.style.justifyContent = "center";

@@ -11,7 +11,23 @@ function Animals(say) {
 }
 
 let dog = new Animals("woof");
-dog.say();
+
 
 let cat = new Animals("meow");
 cat.say();
+dog.say();
+
+function talk(){
+    console.log(this.sound);
+}
+
+let animal = {
+    talk
+}
+
+let bear = {
+    sound: "grrr"
+}
+
+Object.setPrototypeOf(bear, animal);
+bear.talk();
