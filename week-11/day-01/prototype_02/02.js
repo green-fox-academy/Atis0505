@@ -20,8 +20,32 @@ Rectangles.prototype.getCircumference = function(aside,heihgt){
 }
 
 let rect = new Rectangles(2,10);
-console.log(rect.getArea());
-console.log(rect.getCircumference());
+console.log("With class" + rect.getArea());
+console.log("With class" +rect.getCircumference());
 let rect02 = new Rectangles(20,100);
-console.log(rect02.getArea());
-console.log(rect02.getCircumference());
+console.log("With class" +rect02.getArea());
+console.log("With class" +rect02.getCircumference());
+
+
+function getArea02(){
+    return this.a*this.b;
+}
+
+function getCircumference02(){
+    return (this.a+this.b)*2
+}
+
+
+let Rectangle = {
+    getArea02,
+    getCircumference02
+}
+
+let firstRectangle = {
+    a:2,
+    b:10
+}
+
+Object.setPrototypeOf(firstRectangle, Rectangle);
+console.log("With Prototype:"+firstRectangle.getArea02());
+console.log("With Prototype:"+firstRectangle.getCircumference02());
