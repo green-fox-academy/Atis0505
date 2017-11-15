@@ -1,13 +1,13 @@
 'use strict'
 let password_string = 'Alga19890505';
-const mysql = require('mysql');
+let mysql = require('mysql');
 let express = require('express');
 let app = express();
 
 express.json.type = "application/json";
 
 app.use(express.json());
-app.use('/assets',express.static('./assets'));
+app.use('/',express.static('./'));
 
 var sqlConnection = mysql.createConnection({
     host: 'localhost',
@@ -16,15 +16,49 @@ var sqlConnection = mysql.createConnection({
     database: 'Music'
 });
 
-app.get("/Playlists", function(request, response){
+function getList(typeList){
     let data = [];
-    sqlConnection.query("Select title from Music;", function(err, results, fields){
-        results.forEach(function(element){data.push(element.title)
-            console.log(element.title);
+    sqlConnection.query("Select * from "+typeList+";", function(err, results, fields){
+        results.forEach(function(element){data.push(element)
+        })
+        response.send(data);
+    })
+}
+
+app.get('/', function(request, response){
+    response.sendFile(__dirname + '/index.html');
+    console.log(__dirname);
+});
+
+app.get("/playlists", function(request, response){
+    let data = [];
+    sqlConnection.query("Select * from PlayList;", function(err, results, fields){
+        results.forEach(function(element){data.push(element)
         })
         response.send(data);
     })
     
 });
+
+app.get("/tracklists", function(request, response){
+    let data = [];
+    sqlConnection.query("Select * from Music;", function(err, results, fields){
+        results.forEach(function(element){data.push(element)
+        })
+        response.send(data);
+    })
+    
+});
+
+app.post("/playlists", function(req, res){
+    console.log(req.body);
+    let data = [];
+    sqlConnection.query("INSERT INTO PlayList (name) VALUES ('"+ req.body.title +"')");
+    // res.json({result : "ok"});
+    data.push({"status" : "ok"});
+    res.json(data);
+});
+
+// app.delete("/playlists", function(req, res))
 
 app.listen(4500);

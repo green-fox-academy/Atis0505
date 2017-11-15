@@ -1,0 +1,126 @@
+html {
+    text-align: center;
+}
+
+body {
+    display: inline-block;
+    background-color: white;
+    align-items: center;
+    margin: 100 auto;
+}
+
+container {
+    width: 900px;
+    height: 500px;
+    background-color: #F5F5F5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 80px;
+    grid-template-areas: "left_side right_side"
+                         "footer footer";
+    border: 2px solid grey;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px gray;;
+}
+
+.left_side {
+    max-width: 100%;
+    max-height: 100%;
+    grid-area: left_side;
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    grid-template-rows: 90px 30px 1fr;
+    grid-template-areas: "logo album_pic"
+                         "add_new_list album_pic"
+                         "play_lists play_lists";
+    border-right: 1px solid gray;
+    border-top-left-radius: 5px;
+}
+
+.right_side {
+    grid-area: right_side;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: "title"
+                         "track_list";
+    border-left: 1px solid gray;
+}
+
+sidebar {
+    border-bottom: 1px solid gray;
+}
+
+footer {
+    grid-area: footer;
+    border-bottom-right-radius: 5px; 
+    border-bottom-left-radius: 5px;
+    background-color: white;    
+    display: inline-block;
+}
+
+.logo{
+    display: inline-block;
+    grid-area: logo;
+    border-top-left-radius: 5px;
+    text-align: left;
+}
+
+.album_pic {
+    display: inline-block;
+    grid-area: album_pic;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+}
+
+.add_new_list {
+    grid-area: add_new_list;
+    display: inline-block;
+    text-align: right;
+    justify-content: right;
+    border-bottom: 2px solid grey;
+    border-top: 2px solid grey;
+    padding: 2.5px;
+}
+
+title {
+    grid-area: title;
+    border-top-right-radius: 5px;
+}
+
+.play_lists{
+    grid-area: play_lists;
+    text-align: left;
+    display: inline-block;
+    overflow: scroll;
+}
+
+.track_list {
+    grid-area: track_list;
+    text-align: left;
+    display: inline-block;
+    overflow: scroll;
+}
+
+.add_new_list img {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.div {
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+audio {
+    width: 500px;
+    height: 100%;
+}
+
+.green {
+    background-color: #ABE7E5;
+}
+.red {
+    background-color: red;
+}

@@ -1,19 +1,23 @@
 'use strict'
 
-let xhr = new XMLHttpRequest();
-let url = "http://localhost:4500";
 
-function talkToApi(request_type, end_point, callback){
+
+function ajax(request_type, end_point, callback, reqBody){
+    
+    let xhr = new XMLHttpRequest();
+    let url = "http://localhost:4500";
+
+   
     xhr.open(request_type, url+end_point,true);
-    xhr.onload() = function(){
-        callback(xhr.response);
+
+    xhr.setRequestHeader("accept", "application/json");
+    xhr.setRequestHeader("content-type", "application/json");
+    xhr.onload = function(){
+        callback(JSON.parse(xhr.responseText));
     }
-    xhr.send();
-}
-
-talkToApi("GET", "/Playlists", parseResponse);
-
-function parseResponse(musicResponse){
-    let musicTitles = JSON.parse(musicResponse);
-    console.log(musicTitles);
+    let bodyDataText = null;
+    if(reqBody){
+        bodyDataText = JSON.stringify(reqBody);
+    }
+    xhr.send(bodyDataText);
 }
