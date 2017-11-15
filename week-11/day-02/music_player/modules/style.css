@@ -72,6 +72,12 @@ footer {
     border-left: 2px solid grey;
     border-bottom: 2px solid grey;
 }
+.album_pic.img {
+    max-width:120px;
+    max-width: 120px;
+    width: auto;
+    height: auto;
+}
 
 .add_new_list {
     grid-area: add_new_list;

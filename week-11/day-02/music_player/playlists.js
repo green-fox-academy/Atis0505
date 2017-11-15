@@ -2,18 +2,17 @@
 
 const playListModule = (function(){
 
-    // const PlaylistDialog = function(dialog) {
-    //     return {
-    //         create: function(playlistName) {
-    //             let li = document.createElement('li')
-    //             li.textContent = playlistName
-    //             document.querySelector('ul').appendChild(li);
-    //             dialog.close();
-    //         }
-    //     }
-    // }
+    const PlaylistDialog = function(dialog) {
+        return {
+            create: function(playlistName) {
+                let li = document.createElement('li')
+                li.textContent = playlistName
+                document.querySelector('ul').appendChild(li);
+                dialog.close();
+            }
+        }
+    }
 
-    let pass = function(){};
     const Create = function(playListName){
         let postData = { "title" : playListName};
         ajax("POST", "/playlists", Render, postData);
@@ -24,7 +23,7 @@ const playListModule = (function(){
     };
 
     const Delete = function(index){
-        ajax("DELETE", "/playlists/:id", index)
+        ajax("DELETE", "/playlists", index)
     };
 
     const Render = function(responsePlayLists){  
@@ -38,18 +37,42 @@ const playListModule = (function(){
             listsDiv.style.fontSize = "20px";
             listsDiv.style.textAlign = "left";
             listsDiv.style.padding = "8px";
-            listsDiv.textContent = playListItem.name;
-            let index_string = i+1;
-            listsDiv.className = index_string;
-            listsDiv.addEventListener('click', function(){
-                listsDiv.style.backgroundColor = "#ABE7E5";
-            });
+            listsDiv.style.color = "#BEBEBE";      
+            listsDiv.classList.add = i;
+            listsDiv.innerHTML = playListItem.name;
+            
             if(i % 2 == 0){
-                listsDiv.style.backgroundColor = "#EAEAEA";
+                listsDiv.style.backgroundColor = "rgb(234, 234, 234)";
             }else{
-                listsDiv.style.backgroundColor = "#F5F5F5";
+                
+                listsDiv.style.backgroundColor = "rgb(245, 245, 245)";
             }
+            listsDiv.addEventListener('click', function(){
+                let old_color = listsDiv.style.backgroundColor;
+                if(!listsDiv.style.backgroundColor === "rgb(171, 231, 229)"){
+                    listsDiv.style.backgroundColor = "rgb(171, 231, 229)";
+                }else{
+                    listsDiv.style.backgroundColor = old_color;
+                }
+                
+                // Highlight(i--, listsDiv.style.backgroundColor);
+            });
             play_list.appendChild(listsDiv);
+        });
+    }
+
+    const Highlight = function(index, old_color){
+        console.log(old_color);
+        let listsDiv = document.querySelectorAll('.play_lists.div');
+        console.log(old_color);
+        listsDiv.forEach(function(div, i){
+            console.log("régi",old_color);
+            if(!div.style.backgroundColor == "rgb(171, 231, 229)"){
+                div.style.backgroundColor = "rgb(171, 231, 229)"
+            }else{
+                div.style.backgroundColor = old_color;
+            }
+            console.log("új",div.style.backgroundColor);
         });
     }
 

@@ -29,14 +29,18 @@ const trackListModule = (function(){
     const Render = function(responseTrackLists){  
         console.log(responseTrackLists);
         let track_list = document.querySelector('.track_list');
+        while(track_list.firstChild){
+            track_list.removeChild(track_list.firstChild);
+        }
         responseTrackLists.forEach(function(trackListItem, i) {
             let listsDiv = document.createElement('div');
-            // listsDiv.style.height = "40px";
             listsDiv.style.fontSize = "20px";
             listsDiv.style.textAlign = "left";
             listsDiv.style.padding = "8px";
-            listsDiv.textContent = trackListItem.title;
-            listsDiv.addEventListener('mouseover', function(){
+            listsDiv.style.color = "#BEBEBE";
+            let trackIndex = ++i;
+            listsDiv.textContent = trackIndex+" "+trackListItem.title;
+            listsDiv.addEventListener('click', function(){
                 listsDiv.style.backgroundColor = "#ABE7E5";
             });
             let index_string = i+1;

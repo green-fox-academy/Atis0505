@@ -53,12 +53,38 @@ app.get("/tracklists", function(request, response){
 app.post("/playlists", function(req, res){
     console.log(req.body);
     let data = [];
-    sqlConnection.query("INSERT INTO PlayList (name) VALUES ('"+ req.body.title +"')");
+    // sqlConnection.query("INSERT INTO PlayList (name) VALUES ('"+ req.body.title +"')");
     // res.json({result : "ok"});
-    data.push({"status" : "ok"});
+    // data.push({"status" : "ok"});
     res.json(data);
 });
 
-// app.delete("/playlists", function(req, res))
+app.post("/tracklists", function(req, res){
+    console.log(req.body);
+    let data = [];
+    // sqlConnection.query("INSERT INTO Music (name) VALUES ('"+ req.body.title +"')");
+    // res.json({result : "ok"});
+    // data.push({"status" : "ok"});
+    res.json(data);
+});
+
+app.delete("/playlists/:id", function(req, res){
+    let data = [];
+    sqlConnection("DELETE FROM PlayList WHERE id="+req.params.id+";", function(err, results, fields){
+        results.forEach(function(element){data.push(element)
+        })
+    res.json(data);
+    })
+});
+
+app.delete("/tracklists/:id", function(req, res){
+    let data = [];
+    sqlConnection("DELETE FROM Music WHERE id="+req.params.id+";", function(err, results, fields){
+        results.forEach(function(element){data.push(element)
+        })
+    res.json(data);
+    })
+});
+
 
 app.listen(4500);
