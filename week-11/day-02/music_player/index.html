@@ -4,34 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="modules/style.css" rel="stylesheet" type="text/css">
     <title>Document</title>
 </head>
 <body>
     <container>
         <sidebar class="left_side">
-            <div class="logo"><img  src="img/fox.png"></div>
-            <div class="add_new_list"><img src="img/plus.png"></div>
-            <div class="album_pic"><img  src="img/linkin_park.jpg" class="album"></div>
-            <div class="play_lists">
-                <h1></h1>
-                <button>Action</button>
-            </div>
+            <div class="logo"><img  src="modules/fox.png"></div>
+            <div class="add_new_list"><img src="modules/plus.png"></div>
+            <div class="album_pic"><img  src="modules/linkin_park.jpg" class="album"></div>
+            <div class="play_lists"></div>
         </sidebar>
         <sidebar class="right_side">
-            <title></title>
+            <title><p></p></title>
             <div class="track_list"></div>
         </sidebar>
         <footer>
                 <audio controls class="playline">
-                        <source src="music/Faded.mp3" type="audio/ogg">
-                        <source src="music/Faded.mp3" type="audio/mpeg">
+                        <source src="modules/Faded.mp3" type="audio/ogg">
+                        <source src="modules/Faded.mp3" type="audio/mpeg">
                 </audio>
         </footer>
     </container>
-    <script src="ajax_module.js"></script>
-    <script src="playlists.js"></script>
-    <script src="tracklist.js"></script>
+    <script src="modules/ajax_module.js"></script>
+    <script src="modules/playlists.js"></script>
+    <script src="modules/tracklist.js"></script>
     
 </body>
 </html>

@@ -7,7 +7,7 @@ let app = express();
 express.json.type = "application/json";
 
 app.use(express.json());
-app.use('/',express.static('./'));
+app.use('/modules',express.static('./modules'));
 
 var sqlConnection = mysql.createConnection({
     host: 'localhost',
@@ -27,7 +27,6 @@ function getList(typeList){
 
 app.get('/', function(request, response){
     response.sendFile(__dirname + '/index.html');
-    console.log(__dirname);
 });
 
 app.get("/playlists", function(request, response){
@@ -51,7 +50,6 @@ app.get("/tracklists", function(request, response){
 });
 
 app.post("/playlists", function(req, res){
-    console.log(req.body);
     let data = [];
     // sqlConnection.query("INSERT INTO PlayList (name) VALUES ('"+ req.body.title +"')");
     // res.json({result : "ok"});
@@ -70,7 +68,7 @@ app.post("/tracklists", function(req, res){
 
 app.delete("/playlists/:id", function(req, res){
     let data = [];
-    sqlConnection("DELETE FROM PlayList WHERE id="+req.params.id+";", function(err, results, fields){
+    sqlConnection("DELETE FROM PlayList WHERE id="+req.params.id+";Select * from PlayList;", function(err, results, fields){
         results.forEach(function(element){data.push(element)
         })
     res.json(data);
@@ -79,7 +77,7 @@ app.delete("/playlists/:id", function(req, res){
 
 app.delete("/tracklists/:id", function(req, res){
     let data = [];
-    sqlConnection("DELETE FROM Music WHERE id="+req.params.id+";", function(err, results, fields){
+    sqlConnection("DELETE FROM Music WHERE id="+req.params.id+";Select * from Music;", function(err, results, fields){
         results.forEach(function(element){data.push(element)
         })
     res.json(data);

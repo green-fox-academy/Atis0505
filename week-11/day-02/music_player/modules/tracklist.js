@@ -23,7 +23,7 @@ const trackListModule = (function(){
     };
 
     const Delete = function(index){
-        ajax("DELETE", "/tracklists", index)
+        ajax("DELETE", "/tracklists/"+index, Render)
     };
 
     const Render = function(responseTrackLists){  
@@ -34,24 +34,35 @@ const trackListModule = (function(){
         }
         responseTrackLists.forEach(function(trackListItem, i) {
             let listsDiv = document.createElement('div');
-            listsDiv.style.fontSize = "20px";
-            listsDiv.style.textAlign = "left";
-            listsDiv.style.padding = "8px";
-            listsDiv.style.color = "#BEBEBE";
-            let trackIndex = ++i;
-            listsDiv.textContent = trackIndex+" "+trackListItem.title;
+            listsDiv.classList.add('listItem');           
             listsDiv.addEventListener('click', function(){
-                listsDiv.style.backgroundColor = "#ABE7E5";
+                Highlight(i, trackListItem.title);
             });
+            listsDiv.addEventListener('bdlclick', function(){
+                Delete(i);
+            })
             let index_string = i+1;
-            listsDiv.className = index_string;
-            if(i % 2 == 0){
-                listsDiv.style.backgroundColor = "#EAEAEA";
-            }else{
-                listsDiv.style.backgroundColor = "#F5F5F5";
-            }
+            listsDiv.classList.add(index_string);
+            listsDiv.textContent = (i+1)+" "+trackListItem.title;
             track_list.appendChild(listsDiv);
+
         });
+    }
+
+    const Highlight = function(index, title){
+        console.log(index+ "  "+title);
+        let titleTag = document.querySelector('title');
+        let trackDivs = document.querySelectorAll('.track_list div');
+        trackDivs.forEach(function(div, i){
+            if(i === index){
+                div.setAttribute("style","background: lightgreen;");
+
+            }else if(i % 2 == 0 ){
+                div.setAttribute("style", "background-color: #EAEAEA;")
+            }else{
+                div.setAttribute("style", "background-color: #F5F5F5;")
+            }
+        })
     }
 
     return {

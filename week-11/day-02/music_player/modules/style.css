@@ -72,7 +72,7 @@ footer {
     border-left: 2px solid grey;
     border-bottom: 2px solid grey;
 }
-.album_pic.img {
+.album_pic img {
     max-width:120px;
     max-width: 120px;
     width: auto;
@@ -92,6 +92,8 @@ footer {
 title {
     grid-area: title;
     border-top-right-radius: 5px;
+    font-size: 40px;
+    color: #555555;
 }
 
 .play_lists{
@@ -99,6 +101,7 @@ title {
     text-align: left;
     display: inline-block;
     overflow: scroll;
+    height: 100%;
 }
 
 .track_list {
@@ -106,6 +109,7 @@ title {
     text-align: left;
     display: inline-block;
     overflow: scroll;
+    height: 100%;
 }
 
 .add_new_list img {
@@ -113,20 +117,22 @@ title {
     max-height: 20px;
 }
 
-.div {
-    height: 30px;
+.listItem {
+    padding: 8px;
     font-size: 20px;
-    text-align: center;
+    text-align: left;
+    color: #555555;
+}
+
+.listItem:nth-child(even) {
+    background-color: #EAEAEA;
+}
+
+.listItem:nth-child(odd) {
+    background-color: #F5F5F5;
 }
 
 audio {
-    width: 500px;
-    height: 100%;
+    width: 80%;
 }
 
-.green {
-    background-color: #ABE7E5;
-}
-.red {
-    background-color: red;
-}
