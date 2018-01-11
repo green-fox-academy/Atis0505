@@ -1,6 +1,6 @@
 [This is the syllabus link](https://github.com/greenfox-academy/rabbit-syllabus)
 
-🐰 Foundation
+<h1>🐰 Foundation</h1>
 Week 1 - HTML, CSS
 Week 2 - Programming Basics in Python
 Week 3 - File IO and drawing in Python
