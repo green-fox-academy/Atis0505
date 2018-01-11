@@ -18,5 +18,10 @@ Week 10 - Prototype, closures / Musicplayer<br>
 Orientation Exam<br>
 
 <h1>🐰🐰🐰 Project Phase</h1><br>
+Húli project - Marvin frontend project in Angular 5<br>
+<img src="">
+
+FedEx day - HúliChat project(Angular, FireBase, Flask)<br>
+<img src="">
 
 Final Exam<br>
