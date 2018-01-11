@@ -18,11 +18,11 @@ Week 10 - Prototype, closures / Musicplayer<br>
 Orientation Exam<br>
 
 <h1>🐰🐰🐰 Project Phase</h1><br>
-Húli project - Marvin frontend project in Angular 5 [>>](https://github.com/greenfox-academy/HuliChat)<br>
+Húli project - Marvin frontend project in Angular 5 (https://github.com/greenfox-academy/HuliChat)<br>
 
 <img src="marvin_frontend_angular.jpg">
 
-FedEx day - HúliChat project(Angular, FireBase, Flask) [>>](https://github.com/greenfox-academy/huli-marvin-frontend)<br>
+FedEx day - HúliChat project(Angular, FireBase, Flask) (https://github.com/greenfox-academy/huli-marvin-frontend)<br>
 
 <img src="hulichat_pic.jpg">
 
