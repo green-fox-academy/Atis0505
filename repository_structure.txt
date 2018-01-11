@@ -1,0 +1,62 @@
+GitHub repo structure:
+week-01
+	day-01: first webpage
+	day-02: team building
+	day-03: command line
+	day-04: getting start with HTML,css
+
+week-02
+	day-01: gettind start with python(print, math,draw)
+	day-02: matrix, append,compare, factorio, reverse,sum, swap)
+	day-03: play with strings
+	day-04: bubble sort, functions, table printer
+	day-05: armstrong, anagram, find out game
+week-03
+	day-01: filo I/O, exceptions, play with strings 02
+	day-02: training
+	day-03: canvas drawing
+	day-04: fractals, fibonacci(recursion)
+	day-05: fractals 02
+week-04:
+	day-01: classes
+	day-02: inheritance(garden, aircraft)
+	day-03: testing
+	day-04: day off
+	day-05:	testing
+week-05:
+	day-01: RPG game/Exam
+	day-02: RPG game/Exam
+	day-03: RPG game/Exam
+	day-04: RPG game/Exam
+	day-05: RPG game/Exam
+
+week-07:
+	day-01: advance css,html
+	day-02: poker project
+	day-03: css animations
+	day-04: flexbox and grid
+	day-05: weekly project, advance webpage
+week-08:
+	day-01: getting start with javascript
+	day-02: data structure(arrays, objects, strings), functions(matrix, sum, factorial, compare, reverse, swap)
+	day-03: getting start with DOM
+	day-04: day off
+	day-05: lightning talk(python, JS, ruby), weekly project
+week-09:
+	day-01: classes in JS
+	day-02: callback function, map, JSON, click event
+	day-03: day off
+	day-04: REST api(google map api)
+	day-05: Reddit weekly project
+week-10:
+	day-01: bookstore, sql, lightningtalk
+	day-02: testing, try-catch, typeof
+	day-03: ajax calls, endpoints, JSON files
+	day-04: mysql, bookstore
+	day-05: day off
+week-11:
+	day-01: gyuri bookstore
+	day-02: Fox player
+	day-03: Fox player
+	day-04: Foy player
+	day-05: Foy player
