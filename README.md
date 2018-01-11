@@ -19,9 +19,10 @@ Orientation Exam<br>
 
 <h1>🐰🐰🐰 Project Phase</h1><br>
 Húli project - Marvin frontend project in Angular 5<br>
-<img src="">
+<img src="marvin_frontend_angular.jpg">
 
 FedEx day - HúliChat project(Angular, FireBase, Flask)<br>
-<img src="">
+<img src="hulichat_pic.jpg">
+
 
 Final Exam<br>
