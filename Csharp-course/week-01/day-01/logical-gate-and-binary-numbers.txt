@@ -28,3 +28,13 @@ Decimal		Binary
 3       =	00000011
 4	    =	00000100
 5        =	00000101
+
+Videos:
+https://www.youtube.com/watch?v=gI-qXk7XojA Boolean logic and logic gates
+https://www.youtube.com/watch?v=1GSjbWt0c9M Reprezenting letters and numbers in Binary
+https://www.youtube.com/watch?v=1I5ZMmrOfnA How computer calculate - ALU
+https://www.youtube.com/watch?v=fpnE6UAfbtU Regiters and RAM
+
+Optional:
+https://www.youtube.com/watch?v=O5nskjZ_GoI Early computing
+https://www.youtube.com/watch?v=LN0ucKNX0hc Eletronic computing
