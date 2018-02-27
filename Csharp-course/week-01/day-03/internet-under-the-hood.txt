@@ -1,0 +1,18 @@
+Wednesday: The internet: under the hood
+
+Videos:
+https://www.youtube.com/watch?v=h8K49dD52WA History of the internet
+https://www.youtube.com/watch?v=Dxcc6ycZ73M What is the internet?
+https://www.youtube.com/watch?v=iV-YqG70wbQ Wires, cabels and Wifi > internet 101
+https://www.youtube.com/watch?v=aD_yi5VjF78 Packet, routers and reliability
+
+Self Assessment
+Write a few sentences about how the following things work or what they are.
+
+Memory Address
+Bandwith
+Bitrate
+Packet
+Router
+Internet protocol (IP)
+Transmission Control Protocol (TCP)
