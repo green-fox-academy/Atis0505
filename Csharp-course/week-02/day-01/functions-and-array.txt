@@ -1,0 +1,144 @@
+Functions and arrays
+
+Dive deeper into real programming, reuse code and get to know more complex data structures
+
+Materials & Resources
+
+Videos:
+https://www.youtube.com/watch?v=7sqUaw4g_iQ Introduction to Arrays	9:35
+https://www.youtube.com/watch?v=RQ0JHMGiobo Arrays	only until 11:10
+https://www.youtube.com/watch?v=QwygwfqOHsI Methods & Using Functions	17:07
+https://www.youtube.com/watch?v=Vlhcgb9Co4s Foreach	7:40
+https://www.youtube.com/watch?v=cPrcVeTEQXI Constant & ReadOnly	2:09
+https://www.youtube.com/watch?v=7ab4z9u7Q_I Debugging in VisualStudio	16:15
+
+Optional
+Videos:
+https://www.youtube.com/watch?v=3UcJGikWJxs Arrays again	7:25
+https://www.youtube.com/watch?v=T0Zg7kQ3RVE Jagged/Multidimensional array	8:11
+
+
+Material Review
+    Declaring
+        const
+        readonly
+        initial values of arrays {}
+        new keyword
+    Functions
+        void or return a value
+        can be used to compartmentalise code (make more readable)
+        have own variables
+        take parameters
+    Arrays
+        can be measured (have Length)
+        can be iterated through
+        type definition (e.g. string[])
+        CopyTo
+        sort
+        foreach statement
+    Debugging
+        breakpoint
+        step over
+        watches
+        evaluate expression
+
+
+Workshop
+
+Functions
+
+using System;
+
+namespace Example
+{
+    class Program
+    {
+        public static void GreetingFunction(){
+            Console.WriteLine("hello");
+        }
+
+        static void Main(string[] args)
+        {
+            GreetingFunction();
+            Console.ReadLine();
+        }
+    }
+}
+
+
+Excercises
+
+    Doubling
+    Greeter function
+    Append a
+    Summing
+    Factorial
+    Arrays
+
+using System;
+
+namespace Example
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] array = {1, 2, 3 , 8};
+
+            // Print the second element of the array
+            Console.WriteLine(array[1]);
+
+            // Print all the array elements
+            for(int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+Excercises
+
+    Third
+    Compare Length
+    Sum elements
+    Change element
+    Increment element
+    Print elements
+    Matrix
+    Double items
+    Colors
+    Append a
+    Swap elements
+    Sum all elements
+    Reverse list
+
+
+Hard Ones
+    Unique
+    Anagram
+    Palindrome builder
+    Palindrome searcher
+    Sort that list
+
+
+Individual Workshop Review
+
+Please follow the styleguide: Our C# styleguide
+https://github.com/greenfox-academy/teaching-materials/blob/master/styleguide/cs.md
+
+    Is the directory structure and the name of the files correct?
+    Are the includes palced on the top of the files?
+    Is the indentation good in each file?
+    Is there unnecessary code?
+    Can you find unnecessary code in comments?
+    Is there unnecessary code duplication?
+    Are there unnecessary empty blocks?
+    Can you spot unused variables?
+    Is the commit message meaningful?
+    Are the names of things following the styleguide?
+        Classes: UpperCamelCase
+        variables: lowerCamelCase
+    Are all of the brackets in the perfect place?
+    Whitespaces, where they should be, where shouldn't?
