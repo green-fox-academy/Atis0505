@@ -1,0 +1,30 @@
+Self Assessment exercises
+
+Input	Operation	Output
+TRUE	not	        False
+FALSE	not	        True
+
+Input	Input	Operation	Output
+TRUE	TRUE	and	        True   
+TRUE	FALSE	and	        False
+FALSE	TRUE	and	        False
+FALSE	FALSE	and	        False
+
+Input	Input	Operation	Output
+TRUE   	TRUE	or	        True
+TRUE	FALSE	or	        True
+FALSE	TRUE	or	        True
+FALSE	FALSE	or	        False   
+
+Input	Input	Operation	Output
+TRUE	TRUE	xor	        False  
+TRUE	FALSE	xor	        True
+FALSE	TRUE	xor	        True
+FALSE	FALSE	xor	        False
+
+Decimal		Binary
+1	    =	00000001
+2	    =	00000010
+3       =	00000011
+4	    =	00000100
+5        =	00000101
