@@ -1,0 +1,13 @@
+DNS and Domains
+
+Videos:
+https://www.youtube.com/watch?v=MwxMsaFFycg IP adresses and DNS
+https://www.youtube.com/watch?v=2ZUxoi7YNgs How the DNS works?
+https://www.youtube.com/watch?v=GlZC4Jwf3xQ Inside the a domain name system!
+
+Self Assessment
+Write a few sentences about how the following things work or what they are.
+
+Internet Service Provider (isp)
+IP Address
+Domain Name System (DNS)
