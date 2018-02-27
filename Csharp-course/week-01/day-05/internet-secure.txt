@@ -1,0 +1,18 @@
+Friday: The Internet: how secure are we?
+Security should be a major concern when you work with the Internet, let's see some basic concepts.
+
+Videos:
+https://www.youtube.com/watch?v=6-JjHa-qLPk Encryption and public keys	6:39
+https://www.youtube.com/watch?v=VPBH1eW28mo Should all locks have keys? Phones, Castles, Encryption, and You.	5:14
+https://www.youtube.com/watch?v=5k24We8pED8 Cybersecurity and crime	5:01
+https://www.youtube.com/watch?v=XEtvwzN_xJk How to avoid social engineering attacks?	2:16
+https://www.youtube.com/watch?v=opRMrEfAIiI What is Your Password?	2:49
+https://www.youtube.com/watch?v=zv0kZKC6GAM How The Self-Retweeting Tweet Worked: Cross-Site Scripting (XSS) and Twitter	6:16
+Self Assessment
+Write a few sentences about how the following things work or what they are.
+
+Encryption
+Security Protocols (https)
+Virus
+DDoS
+Phising
