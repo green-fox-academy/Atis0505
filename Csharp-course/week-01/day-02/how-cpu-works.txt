@@ -1,0 +1,27 @@
+How does cpu works?
+
+Videos:
+https://www.youtube.com/watch?v=cNN_tTXABUA how CPU works?
+https://www.youtube.com/watch?v=zltgXvg6r3k Instructions and programs
+http://visual6502.org/JSSim/index.html 6250 CPU simulation
+
+Optional
+Play with a virtual CPU:
+
+http://www.buthowdoitknow.com/cpu_model_intro.html
+
+Click the image to open the simulator
+Copy the program from the end of the page
+Paste it to program code
+Click run
+Try different clock speeds, see 1000Hz for example
+Do you notice where the counting is displayed?
+
+Write a few sentences about how the following things work or what they are.
+
+CPU
+Control Unit
+ALU
+Instruction Set
+Clock
+RAM
