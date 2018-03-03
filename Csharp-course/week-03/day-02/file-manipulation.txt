@@ -1,0 +1,179 @@
+File manipulation exercises
+
+Videos:
+https://www.youtube.com/watch?v=kGZD_k1M938 Very Basic File read and write	5:09
+https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners/while-Iterations-and-Reading-Data-from-a-Text-File-11 File read and write	11:38
+https://www.youtube.com/watch?v=Dxbbtx-8MKw using keyword	5:35
+https://www.youtube.com/watch?v=DzUFm2FNeyo exceptions	6:56
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/exceptions/exception-handling exceptions(reading)	3:00
+
+
+Optionals
+https://www.youtube.com/watch?v=LkpODZE2vmk File read with exception and fun	5:26
+https://stackoverflow.com/questions/846103/runtime-vs-compile-time Runtime vs Compile time	1:30
+https://www.youtube.com/watch?v=HKqMqFJr4SY File read n write advanced	20:44
+
+
+Material Review
+Files
+    ReadAllLines() / ReadAllText()
+    WriteAllLines() / WriteAllText()
+    StreamWriter
+    StreamReader
+    using
+    Dispose()
+    Compile time error
+    Runtime error
+    Syntax error
+    Semantic error
+    Exceptions
+    Exception types
+    try
+    catch
+    throw
+    finally
+    Parse()
+    @ and \
+
+
+Workshop
+
+Exceptions
+
+using System;
+
+namespace Example
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int divisor = int.Parse(Constole.ReadLine());
+            // If the input value for divisor was 0 the program breaks
+            int result = 12 / divisor;
+            // The program doesn't reach this line if the input was 0
+            Console.WriteLine(result);
+            Console.ReadLine();
+        }
+    }
+}
+The result if the input value was zero:
+
+Exception unhandled!
+System.DivideByZeroException: 'Attempted to divide by zero.'
+
+
+Handle the exception:
+
+using System;
+
+namespace Example
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            try  // Prevents the program breaking when attempting dividing by zero
+            {
+                int divisor = int.Parse(Console.ReadLine());
+                // If the input value for divisor was 0 the program breaks
+                int result = 12 / divisor;
+                // The program doesn't reach this line if the input was 0
+                Console.WriteLine(result);
+            }
+            catch (DivideByZeroException e)
+            {
+                // This line only runs if the input was 0
+                Console.WriteLine("Can't divide by zero!");
+            }
+            catch (Exception e)
+            {
+                // This line only runs if uncatched exception generated
+                Console.WriteLine("uuups, some serious thing happened!");
+            }
+            finally
+            {
+                Console.ReadLine();
+            }
+        }
+    }
+}
+
+
+Practice
+
+Divide by zero
+Reading files
+using System;
+using System.IO;
+
+namespace Example
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            string path = @"./assets/lorem-ipsum.txt";
+            try
+            {
+                // Reads the content from `lorem-psum.txt` in the `assets` folder line by line to a string List
+                string[] content = File.ReadAllLines(path);
+                // Prints the first line of the file
+                Console.WriteLine(content[0]);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Uh-oh, could not read the file!");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
+
+
+Practice
+
+Print each line
+Count lines
+Writing files
+
+using System;
+using System.IO;
+
+namespace Example
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string path = @"./lorem-ipsum.txt";
+            using (StreamWriter writer = new StreamWriter(path))
+            {
+                writer.WriteLine("Hello Alpaga!");
+            }
+        }
+    }
+}
+
+Practice
+    Write single line
+    Write multiple lines
+
+Exercises
+
+Core
+    Copy file
+    Tic-Tac-Toe
+    Logs
+
+
+Decryption
+    Doubled, source file is here
+    Reversed lines, source file is here
+    Reversed order, source file is here
+
+
+Optional exercises
+    Encoded lines, source file is here
+    Lottery, source file is here
