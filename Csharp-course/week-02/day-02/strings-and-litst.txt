@@ -1,0 +1,88 @@
+Strings and Lists
+Get familiar with C# string methods and a new data structure: List.
+
+Make sure you finish the sorting assignment, rewatch the video if needed.
+
+Videos:
+https://www.youtube.com/watch?v=afY8t4Iv-nc Learn How To Program In C# - String Manipulation	16:31
+https://www.youtube.com/watch?v=CLsmRBmteas Working with Strings in C#	25:47
+https://www.youtube.com/watch?v=Kx8ij3WZpSg C# List & Generics	6:52
+https://www.youtube.com/watch?v=UG8s4sWDOqI C# Dictionary Tutorial	2:26
+
+Optional videos:
+https://www.youtube.com/watch?v=h2d9b_nEzoA Hash Tables	7:41
+
+Material Review
+
+String
+    .Length()
+    .Substring()
+    .Replace()
+    .Equals()
+    .ToLower()
+    .ToUpper()
+    .Contains()
+    .IndexOf()
+    .LastIndexOf()
+    .Split()
+StringBuilder
+List
+    Object
+    means to add and remove
+    initialize
+        what are the situation? empty, with values
+        how does one use such; loops
+    .Add() (to the next position, at an index)
+    .AddRange()
+    .Remove(), .RemoveAt()
+    .Capacity()
+    .Count()
+    .Clear()
+    searching: .Contains(), .Find()
+    assigning between arrays (copying .ToArray())
+Dictionary
+    key
+    value
+    .Add()
+
+
+Workshop
+
+Strings
+Strings are basic data structures, they can be treated like a list or array of characters.
+
+01
+02
+03
+04
+05
+Lists
+Let's play more with list manipulation
+
+01
+02
+03
+04
+05
+06
+07
+Okay, you've made it this far. Awesome. If you feel you can get back to any remaining tasks you're unsure of from the previous days. If list is still not your friend, redo all (or some of) the tasks for arrays just with lists instead
+
+// You can simply convert the examples from this
+int[] example = { 1, 2, 3 };
+// To this
+List<int> converted = new List<int>  { 1, 2, 3 };
+Only proceed to these if you're confident using lists, functions, loops, conditions
+
+08
+Dictionary
+Dictionaries are key-value pairs. If you think of it, the list or array is also a dictionary, just with specifically integers as keys.
+
+01
+02
+Hard Ones
+Find part of an integer
+Find the substring in the list
+Guess my number
+Josephus Problem
+Armstrong Number

@@ -1,0 +1,138 @@
+Drawing and Graphics
+Draw on a canvas using our previous knowledge about control flow and functions
+
+Purpose
+The main purpose of this workshop is practicing control flow,
+ in a more complex context. It is easier to understand the
+  mechanism of loops and conditionals if it appears visually
+   on the screen. Also, the workshop adds a simple 
+   abstraction layer by introducing drawing. 
+   The participant has to understand the methods of a 
+   graphics library. Therefore, build the habit of 
+   processing documentation, while practicing their 
+   knowledge about the basic building blocks.
+
+
+Videos:
+https://www.youtube.com/watch?v=ImH_LvRMISw WPF Introduction	9:10
+https://docs.microsoft.com/en-us/dotnet/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview Shapes and Basic Drawing in WPF	Read until Using Path and Geometries
+https://docs.microsoft.com/en-us/dotnet/api/system.windows.shapes.line?view=netframework-4.7#Examples  Line	Example only
+https://docs.microsoft.com/en-us/dotnet/api/system.windows.shapes.ellipse?view=netframework-4.7#Examples  Ellipse	Example only
+https://docs.microsoft.com/en-us/dotnet/api/system.windows.shapes.rectangle?view=netframework-4.7#Examples  Rectangle	Example only
+https://docs.microsoft.com/en-us/dotnet/api/system.windows.shapes.polygon?view=netframework-4.7#Examples  Polygon	Example only
+
+
+Material Review
+    WPF
+    Canvas
+    Stroke, StrokeThickness, Fill
+    Line
+    Ellipse
+    Rectangle
+    Polygon
+    Point
+
+
+Workshop
+As you saw in the examples, creating shapes and adding 
+them to our canvas is not a few step exercise. That's why 
+we created the FoxDraw.cs to help you focus more on what 
+we are aiming to learn today. If you are curious feel free 
+to dig deeper into the FoxDraw.cs code!
+
+💪💪💪 Hardmode: If you feel comfortable drawing shapes 
+with FoxDraw try to do few exercises without it!
+
+WPF
+<Window x:Class="Drawing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Drawing" Height="331" Width="308">
+    <Grid>
+        <Canvas  Name="canvas"/>
+    </Grid>
+</Window>
+using System;
+using System.Windows.Controls;  
+using GreenFox;
+
+namespace Drawing
+{
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            var foxDraw = new FoxDraw(canvas);
+        }
+    }
+}
+
+
+Lines
+
+public static void DrawGreenLines(FoxDraw foxDraw)
+{
+    foxDraw.StrokeColor(Colors.Green);
+    foxDraw.DrawLine(0, 10, 100, 10);
+
+    var startPoint = new Point(0, 20);
+    var endPoint = new Point(100, 20);
+    foxDraw.DrawLine(startPoint, endPoint);
+}
+
+
+Ellipse
+
+public static void DrawEllipse(FoxDraw foxDraw)
+{
+    foxDraw.DrawEllipse(10, 10, 150, 50);
+}
+
+
+Rectangle
+
+public static void DrawRectangle(FoxDraw foxDraw)
+{
+    foxDraw.DrawRectangle(10, 10, 150, 50);
+}
+
+
+Polygons
+
+public static void DrawGreenPolygon(FoxDraw foxDraw)
+{
+    var points = new List<Point>();
+    points.Add(new Point(10, 10));
+    points.Add(new Point(40, 210));
+    points.Add(new Point(170, 190));
+    points.Add(new Point(130, 40));
+    foxDraw.FillColor(Colors.Green);
+    foxDraw.DrawPolygon(points);
+}
+
+
+Exercises
+
+    Middle lines
+
+    Colored box
+
+    Diagonals
+
+    To the center
+
+    Horizontal
+
+    Square in the center
+
+    Fill with rectangles
+
+    Square positioning
+
+    Centered boxes
+
+    Rainbow boxes
