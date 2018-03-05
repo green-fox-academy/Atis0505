@@ -1,0 +1,25 @@
+﻿txt2html/HTML::TextToHTML Sample Conversion
+
+This sample is based hugely on the original sample.txt produced
+by Seth Golub for txt2html.
+
+I used the following options to convert this document:
+
+     -titlefirst -mailmode -make_tables
+     --custom_heading_regexp '^ *--[\w\s]+-- *$'
+     --system_link_dict txt2html.dict
+     --append_body sample.foot --infile sample.txt --outfile sample.html
+
+This has either been done at the command line with:
+
+	perl -MHTML::TextToHTML -e run_txt2html -- *options*
+
+or using the script
+
+	txt2html *options*
+
+or from a (test) perl script with:
+	
+	use HTML::TextToHTML;
+	my $conv = new HTML::TextToHTML();
+	$conv->txt2html([*options*]);
