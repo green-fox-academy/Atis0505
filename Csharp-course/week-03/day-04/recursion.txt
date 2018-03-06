@@ -1,0 +1,70 @@
+Recursion
+
+What happens when a function calls itself?
+
+Videos:
+https://www.youtube.com/watch?v=Mv9NEXX1VHc What on Earth is Recursion?	till 8:40
+https://www.youtube.com/watch?v=KEEKn7Me-ms Algorithms: Recursion	5:40
+https://www.youtube.com/watch?v=wXvJSv3lS1c c# Recursion	16:41
+https://www.youtube.com/watch?v=WFtTdf3I6Ug Fractals	4:12
+https://github.com/greenfox-academy/teaching-materials/blob/master/workshop/recursion/cs.md Green Fox Teaching Materials on Recursion	∞
+Optional
+
+If you've got time and/or want to dig deeper, consider the following:
+
+Videos:
+
+https://www.youtube.com/watch?v=5_6nsViVM00 Hanoi-tower	7:18
+https://www.ted.com/talks/benoit_mandelbrot_fractals_the_art_of_roughness/up-next?language=en Benoit BM Mandelbrot: Fractals and the art of roughness	17:09
+
+
+Material Review
+
+    recursion
+    base case
+
+
+Workshop
+
+
+Factorial with loop
+
+public static int FactorialWithLoop(int n) 
+{
+    int factorial = 1;
+    for (int i = 1; i  < n + 1; i++) 
+    {
+      factorial *= i;
+    }
+    return factorial;
+}
+
+
+Factorial with recursion
+
+public static int FactorialWithRecursion(int n) 
+{
+    if (n == 1) 
+    {
+        return 1;
+    } 
+    else 
+    {
+        return n * FactorialWithRecursion(n - 1);
+    }
+}
+
+
+Exercises
+
+    01 Counter
+    02 Numberadder
+    03 Sumdigit
+    04 Power
+    05 Bunnies
+    06 Bunnies again
+    07 Strings
+    08 Strings again
+    09 Strings again and again
+    10 Fibonacci
+    11 Refactorio
