@@ -8,34 +8,39 @@ namespace Animal
 {
     class Anim
     {
-        static int hunger;
-        static int thirst;
+        int hunger;
+        int thirst;
 
         public Anim()
         {
-            hunger = 50;
-            thirst = 50;
+            this.hunger = 50;
+            this.thirst = 50;
         }
 
         public void Eat()
         {
-            hunger--;
+            this.hunger--;
         }
 
         public void Drink()
         {
-            thirst--;
+            this.thirst--;
         }
 
         public void Play()
         {
-            thirst++;
-            hunger++;
+            this.thirst++;
+            this.hunger++;
         }
 
         public void GetValues()
         {
-            Console.WriteLine("Hunger point: {0}, Thirst point: {1}", hunger, thirst);
+            Console.WriteLine("Hunger point: {0}, Thirst point: {1}", this.hunger, this.thirst);
+        }
+
+        public int GetHungryPoint()
+        {
+            return this.hunger;
         }
     }
 }

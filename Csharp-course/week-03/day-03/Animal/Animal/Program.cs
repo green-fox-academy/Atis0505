@@ -18,6 +18,13 @@ namespace Animal
                  Every animal can drink() which decreases their thirst by one
                  Every animal can play() which increases both by one*/
 
+            /*Reuse your Animal class  ---- 2. exercise
+                Create a Farm class
+                it has list of Animals
+                it has slots which defines the number of free places for animals
+                breed() -> creates a new animal if there's place for it
+                slaughter() -> removes the least hungry animal*/
+
             var dog = new Anim();
             for (int i = 0; i < 10; i++)
             {
@@ -31,6 +38,28 @@ namespace Animal
                 cat.Eat();
             }
             cat.GetValues();
+
+            Console.WriteLine("New farm animals:");
+            Farm newFarm = new Farm(5);
+            for (int i = 0; i < 10; i++)
+            {
+                newFarm.Breed();
+            }
+
+            for (int i = 0; i < newFarm.GetAnimals().Count; i++)
+            {
+                newFarm.GetAnimals()[i].GetValues();
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("After slaughter method:");
+
+            newFarm.Slaughter();
+
+            for (int i = 0; i < newFarm.GetAnimals().Count; i++)
+            {
+                newFarm.GetAnimals()[i].GetValues();
+            }
 
             Console.ReadKey();
         }
