@@ -16,12 +16,17 @@ namespace Sharpie
         {
             this.color = color;
             this.width = width;
-            inkAmount = 100;
+            this.inkAmount = 100;
         }
 
         public void Use()
         {
-            inkAmount--;
+            this.inkAmount--;
+        }
+
+        public float GetInk()
+        {
+            return this.inkAmount;
         }
 
         public void GetStatus()
