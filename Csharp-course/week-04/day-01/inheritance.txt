@@ -1,0 +1,36 @@
+Inheritance
+Inheritance allows you to create new classes that reuse, 
+extend and modify the behavior of an other class. 
+The class which we inherit from is called the base (or parent) class and the class that inherits from the base class is the derived (or child) class.
+
+Videos:
+https://www.youtube.com/watch?v=18f41HX2gHk Inheritance, What? 'n Why?	5:28
+https://www.youtube.com/watch?v=EiBCF7rYRtI Inheritance Example with Cats 'n Dogs	14:07
+https://www.youtube.com/watch?v=DMGqp8lzbU0 Inheritance	8:27
+https://www.youtube.com/watch?v=6Ez3eNGZnCk Encapsulation	12:53
+https://www.youtube.com/watch?v=CanZ-1AW3jU Sealed classes	3:42
+https://www.youtube.com/watch?v=18D8R3hwYW8 Inheritance & Polymorphism with other example	4:49
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/base Usage of base keyword	-
+https://www.youtube.com/watch?v=-pcbDvUh4e0 Access modifiers (Public, Protected, Private, internal, p:rotected internal)	2:57
+https://www.youtube.com/watch?v=yGQxNb077bA Overriding	8:38
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-properties Getters and setters	
+
+
+Optional materials
+videos:
+http://www.msdotnet.co.in/2012/06/access-specifier-or-modifier-in-c.html#.Wb-wnGeCyV4 Access Modifiers	-
+https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners/Working-with-Classes-and-Inheritances-in-the-NET-Framework-Class-Library-16 Classes and Inheritance	19:36
+
+
+Material Review
+    base
+    access modifiers: public, protected, private, internal, internal protected, default
+    get, set, value
+    virtual vs override vs new
+    casting subClass as Class
+
+
+Workshop
+    Green Fox Organization
+    Garden Application exam
+    Aircraft Carrier
