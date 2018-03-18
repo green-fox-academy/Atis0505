@@ -1,0 +1,132 @@
+Abstracts & Interfaces
+There are times when we need common features in classes 
+but they don't work on their own.
+
+In some situations either:
+
+    *we want to inherit from multiple classes
+    *the base classes have expectations in order to be us
+     ed, or in order to support a much larger framework.
+C# gets round this through Abstracts and Interfaces.
+
+Videos:
+
+https://www.youtube.com/watch?v=QzX7REqciPY Refresher on Inheritance and Polymorphism	5:38
+https://www.youtube.com/watch?v=IGxeyApy1m0 Interface	3:53
+https://www.youtube.com/watch?v=BZN3KstkBAw Abstract class	3:36
+https://www.youtube.com/watch?v=z-37i-M6G9s Abstract Method	5:44
+https://www.youtube.com/watch?v=1pk6ms6GlQQ Interface vs Abstract Summary	2:54
+http://www.aspdotnet-suresh.com/2010/04/abstract-versus-interface.html Interface vs Abstract Summary (written)	
+https://www.c-sharpcorner.com/article/when-to-use-abstract-class-and-interface-in-real-time-projects/ When to use an Abstract class or Interface in C#	reading
+
+Videos:
+https://www.youtube.com/watch?v=6kSTP95-6wo Interfaces (Wertz)	14:27
+https://www.c-sharpcorner.com/UploadFile/93126e/difference-between-abstract-class-and-an-interface/ Interfaces and Abstracts	reading
+https://msdn.microsoft.com/en-us/library/system.icomparable(v=vs.110).aspx IComparable	reading
+https://github.com/greenfox-academy/teaching-materials/blob/master/workshop/interfaces/diamond_problem.png Diamond problem	reading
+
+
+Material Review
+
+    interface
+    abstract class
+    abstract methods
+    polymorphism
+    (virtual || abstract) && override
+    Diamond problem
+    CompareTo()
+
+
+Workshops
+
+Using an interface
+public interface IMoveable
+{
+    void Move(int meter);
+}
+
+public class Car : IMoveable
+{
+    public int distanceTaken;
+
+    public Car()
+    {
+        distanceTaken = 0;
+    }
+
+    public void Move(int meter)
+    {
+        distanceTaken += meter;
+    }
+}
+
+class Example
+{
+    public static void Main(string[] args)
+    {
+        var car = new Car();
+        car.Move(100);
+        Console.WriteLine(car.distanceTaken);
+
+        IMoveable something = new Car();
+        something.Move(200);
+        Console.WriteLine(((Car)something).distanceTaken);
+        
+        Console.ReadLine();
+    }
+}
+
+
+*Cloneable
+*Comparator
+
+
+Abstract classes
+
+public abstract class Animal
+{
+    protected int age = 0;
+
+    public abstract int GrowUp();
+}
+
+public class Cat : Animal
+{
+    public void Purring()
+    {
+        Console.WriteLine("Grrrr");
+    }
+
+    public override int GrowUp()
+    {
+        return ++age;
+    }
+}
+
+class Example
+{
+    public static void Main(string[] args)
+    {
+        //var animal = new Animal(); //can not instantiate
+        var cat = new Cat();
+
+        cat.Purring();
+        Console.WriteLine(cat.GrowUp());
+
+        Console.ReadLine();
+    }
+}
+
+*Instruments to Stringed Instruments
+*Animals in the Zoo
+
+Interfaces
+    Flyable
+    Printable
+    Reservations
+
+    
+Individual Workshop Review
+As always neatness counts in coding.
+
+Please be sure you're well acquainted with the guidelines on coding: GreenFox Academy's C# Styleguide
